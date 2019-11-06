@@ -1,12 +1,17 @@
 # Setup
-name:         Project or Site name (Architect Theme)
-tagline:      A responsive theme for your project on GitHub Pages
-baseurl:      ""
-locale:       "en"
+name:         物聯智慧雲服務
+tagline:      智慧物聯雲服務網站(Thingsboard ，Arduino, Raspberry Pi, LoRa)
+baseurl:      "/SmartIoTCloud"
+locale:       "zh-hant"
 
 # Gems
-gems:
+plugins:
   - jekyll-paginate
 
 #Others
 markdown: kramdown
+
+# kramdown:
+#   syntax_highlighter: pygments
+
+highlighter: pygments
