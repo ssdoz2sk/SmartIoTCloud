@@ -4,6 +4,8 @@ tagline:      智慧物聯雲服務網站(Thingsboard ，Arduino, Raspberry Pi, 
 baseurl:      "/SmartIoTCloud"
 locale:       "zh-hant"
 
+permalink: /:year/:month/:day/:title:output_ext
+
 # Gems
 plugins:
   - jekyll-paginate
