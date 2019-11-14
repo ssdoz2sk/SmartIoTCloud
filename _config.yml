@@ -12,6 +12,7 @@ plugins:
 
 #Others
 markdown: kramdown
+timezone: Asia/Taipei
 
 kramdown:
   syntax_highlighter_opts:

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Raspberry 的設置及隨時連到樹莓派的方法"
-date:   2019-11-12 10:15:56
+date:   2019-11-13 18:15:56 +0800
 categories: RaspberryPi 
 ---
 
@@ -177,4 +177,12 @@ Pairing successful
 ```bash
 ssh pi@172.20.1.1
 ```
+帳號 `pi`， 密碼 `raspberry`
 就可以連上樹莓派啦~
+
+### 5. Python3 相關套件安裝安裝
+
+因為之後的感測器讀取都使用 Python 3，所以基本的 GPIO 跟 pip 就先裝起來
+```bash
+sudo apt install python3-pip python3-rpi.gpio
+```

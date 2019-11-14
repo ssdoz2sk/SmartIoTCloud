@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "安裝 ThingsBoard"
-date:   2019-11-12 10:15:56
+date:   2019-11-12 10:15:56 +0800
 categories: ThingsBoard install
 ---
 
