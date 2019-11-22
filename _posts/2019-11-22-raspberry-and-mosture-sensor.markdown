@@ -12,7 +12,7 @@ categories: RaspberryPi LoRa
 
 ## 2. 將土壤溼度感測器接上插上樹莓派
 
-![]({{ "images/2019-11-22/2019-11-22_rasp_MCP3_mosture_bb" | relative_url }})   
+![]({{ "images/2019-11-22/2019-11-22_rasp_MCP3_mosture_bb.png" | relative_url }})   
 
 [連接圖檔案]({{ "files/fz_sketch/2019-11-22_rasp_MCP3_mosture.fzz" | relative_url }})   
 <!--[元件位置]({{ "files/fz_part/.fzpz" | relative_url }})-->
