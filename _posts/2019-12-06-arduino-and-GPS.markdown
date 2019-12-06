@@ -8,7 +8,7 @@ categories: Arduino GPS
 # Arduino and GPS 模組
 
 ## 1. 基礎設置
-None   
+* TinyGPS 函式庫
 
 ## 2.  GPS 接上插上 Arduino
 
