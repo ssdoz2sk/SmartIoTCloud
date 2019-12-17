@@ -56,7 +56,11 @@ touch ssh
 藍牙再加上 PAN 是很好用的東西。   
 在這邊你應該可以先通過 WiFi 或是有線網路連上樹莓派了
 
-### 1. 在樹莓派上建立藍牙 PAN 網路設定檔
+### 1. 先安裝相依套件，再來在樹莓派上建立藍牙 PAN 網路設定檔
+```bash
+apt install bluez-tools
+```
+
 ```bash
 #file: /etc/systemd/network/pan0.netdev
 [NetDev]
