@@ -24,31 +24,32 @@ categories: RaspberryPi GasSensor
 
 --- 
 
-![]({{ "images/2019-11-17/2019-11-17.png" | relative_url }})   
+![]({{ "images/2019-11-17/2019-11-17_rasp_MCP3_base_bb.png" | relative_url }})   
 
-[連接圖檔案]({{ "files/fz_sketch/2019-11-17.fzz" | relative_url }})   
+[連接圖檔案]({{ "files/fz_sketch/2019-11-17_rasp_MCP3_MQ2_MQ3_MQ9.fzz" | relative_url }})   
 
 ## 3. 程式碼
 ```python
 import time
+import spidev
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(2, GPIO.IN)
-GPIO.setup(3, GPIO.IN)
-GPIO.setup(4, GPIO.IN)
+spi = spidev.SpiDev()
+spi.open(0, 0)
+spi.max_speed_hz=1000000
+
+def readChannel(channel):
+    adc = spi.xfer2([1,(8+channel)<<4,0])
+    data = ((adc[1]&3) << 8) + adc[2]
+    return data
 
 while True:
-    try:
-        MQ2 = GPIO.input(2) 
-        MQ3 = GPIO.input(3) 
-        MQ9 = GPIO.input(4) 
-        print(MQ2, MQ3, MQ9)
-    except RuntimeError as error:
-        print(error.args[0])
-
-    time.sleep(0.5)
+    value = readChannel(0)
+    value2 = readChannel(1)
+    value3 = readChannel(2)
+    print(f'MQ2: {value}  MQ3: {value2}  MQ9: {value3}')
+    time.sleep(1)
 ```
 
 ## 4. 結果
 
-![]({{ "images/2019-11-15/IMG_0524.JPG" | relative_url }})   
+![]({{ "images/2019-11-17/螢幕快照_2019-11-17_12-03-44.png" | relative_url }})   
