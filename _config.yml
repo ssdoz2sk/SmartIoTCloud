@@ -1,6 +1,6 @@
 # Setup
-name:         物聯智慧雲服務
-tagline:      物聯智慧雲服務網站(Thingsboard ，Arduino, Raspberry Pi, LoRa)
+name:         智慧物聯雲服務
+tagline:      智慧物聯雲服務網站(Thingsboard ，Arduino, Raspberry Pi, LoRa)
 baseurl:      "/SmartIoTCloud"
 locale:       "zh-hant"
 
